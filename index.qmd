@@ -1,7 +1,7 @@
 ---
 title: "Christian Reitan"
 about:
-  template: trestles
+  template: solana
   image: assets/portrait.jpg
   image-shape: round
   image-width: 15em
