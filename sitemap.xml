@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://reitancorp.github.io/posts/r_resources/index.html</loc>
+    <lastmod>2024-07-27T19:54:32.502Z</lastmod>
+  </url>
+  <url>
     <loc>https://reitancorp.github.io/index.html</loc>
-    <lastmod>2024-07-27T12:40:38.154Z</lastmod>
+    <lastmod>2024-07-27T19:54:32.839Z</lastmod>
   </url>
   <url>
     <loc>https://reitancorp.github.io/about.html</loc>
-    <lastmod>2024-07-27T12:40:38.959Z</lastmod>
+    <lastmod>2024-07-27T19:54:33.630Z</lastmod>
+  </url>
+  <url>
+    <loc>https://reitancorp.github.io/posts.html</loc>
+    <lastmod>2024-07-27T19:54:33.949Z</lastmod>
   </url>
   <url>
     <loc>https://reitancorp.github.io/CV.html</loc>
-    <lastmod>2024-07-27T12:40:41.733Z</lastmod>
+    <lastmod>2024-07-27T19:54:37.025Z</lastmod>
   </url>
 </urlset>
