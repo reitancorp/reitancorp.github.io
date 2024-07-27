@@ -75,7 +75,7 @@ pubs <- pubs %>%
 
 # format for markdown
 pubs <- pubs %>% 
-  mutate(out = paste0("[", author, "(", year, "). ", title, ". *", journal, "*. ", number,"](", url, ")\n\n")) %>%
+  mutate(out = paste0("[", author, " (", year, "). ", title, ". *", journal, "*. ", number,"](", url, ")\n\n")) %>%
   select(title, out)
 
 cat(pubs$out)
