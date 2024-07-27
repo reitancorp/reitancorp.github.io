@@ -1,0 +1,82 @@
+# CV
+A PDF version can be downloaded [here](https://github.com/reitancorp/cv/raw/master/cv/cv.pdf).
+
+## Experience
+
+Resident physician, Cardiology \| 2020 - Current\
+Danderyd Hospital, Dept. of Cardiology \| Stockholm, Sweden
+
+Researcher \| 2020 - Current\
+Karolinska institutet, Institution for Clinical Sciences Danderyd Hospital \| Stockholm, Sweden
+
+Surgeon, licensed physician \| 2018 - 2020\
+Karolinska University Hospital, Dept. of Cardiothoracic surgery \| Stockholm, Sweden
+
+Surgeon, licensed physician \| 2017 - 2018\
+Scania University Hospital, Dept. of Cardiothoracic surgery \| Lund, Sweden
+
+Medical internship, reseach profile (AT) \| 2015-2017\
+Scania University Hospital \| Malmö, Sweden
+
+Junior surgeon \| 2014 - 2015\
+Karolinska University Hospital, Dept. of Cardiothoracic surgery \| Stockholm, Sweden
+
+Junior Doctor \| 2014-2014\
+Scania University Hospital, Emergency department \| Lund, Sweden
+
+## Education
+
+PhD, Cardiology \| 2014-2018\
+Lund University \| Stockholm, Sweden
+
+Medical School, MD \| 2008-2014\
+Lund University \| Lund, Sweden
+
+## Publications
+```{r}
+#| include: false
+library(tidyverse)
+library(scholar)
+```
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| output: asis
+## Publications - change google id here
+pubs <- scholar::get_publications("S3TOd7gAAAAJ") %>% tibble() %>%
+  mutate(url = scholar::get_article_scholar_url("S3TOd7gAAAAJ", pubid = pubid)) %>%
+  arrange(desc(year))
+
+# manual removal of some entries
+remove_ <- c("Early Subjective Improvement of Exercise Capacity is an Indpendent Predictor of Long Term Survival in Cardiac Resynchronization Therapy Patients",
+             "Long-term results of cardiac resynchronization therapy: A comparison between CRT-pacemakers versus primary prophylactic CRT-defibrillators (vol 38, pg 758, 2015)",
+             "3291 Achieved biventricular pacing during the first year of follow-up predicts long-term outcome in patients with heart failure treated with cardiac resynchronization therapy",
+             "P1950 CHA2DS2-VASC score in a cohort of CRT patients",
+             "CHA2DS2-VASC score in a cohort of CRT patients",
+             "Ventricular high rate episodes predict increased mortality in heart failure patients treated with CRT (vol 49, pg 20, 2015)",
+             "P5683 Incremental hazard associated with the degree of advanced intaratrial block in cardiac resynchronization therapy treated heart failure patients",
+             "Reclassification of Treatment Strategy With Instantaneous Wave-Free Ratio and Fractional Flow Reserve",
+             "Positive Response to Cardiac Resynchronization Therapy-The Role of NTproBNP",
+             "Incremental hazard associated with the degree of advanced intaratrial block in cardiac resynchronization therapy treated heart failure patients",
+             "Left ventricular systolic dysfunction after acute myocardial infarction is associated with a high symptom burden and worse secondary prevention",
+             "Comparison of sodium-glucose co-transporter-2 inhibitors and glucagon-like peptide-1 receptor agonists in myocardial infarction patients with type 2 diabetes"
+)
+pubs <- pubs %>% filter(!title %in% remove_) %>%
+  # remove on pubid
+  filter(!pubid == "QIV2ME_5wuYC")
+
+# add information to thesis
+pubs <- pubs %>%
+  mutate(journal = ifelse(pubid == "WF5omc3nYNoC", 'Lund University, Thesis', journal))
+
+
+# format for markdown
+pubs <- pubs %>% 
+  mutate(out = paste0("[", author, "(", year, "). ", title, ". *", journal, "*. ", number,"](", url, ")\n\n")) %>%
+  select(title, out)
+
+cat(pubs$out)
+```

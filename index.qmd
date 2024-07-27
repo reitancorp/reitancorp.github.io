@@ -1,11 +1,29 @@
 ---
-title: "reitancorp_"
+title: "Christian Reitan"
+about:
+  template: trestles
+  image: assets/portrait.jpg
+  image-shape: round
+  links:
+    #- icon: twitter-x
+      # text: X
+     # href: https://x.com/reitancorp
+    - icon: github
+      text: GitHub
+      href: https://github.com/reitancorp
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/christianreitan
+    - icon: orcid
+      text: "{{< ai orcid >}} ORCiD"
+      href: https://orcid.org/0000-0002-6460-4853
+    - icon: scholar
+      text: "{{< ai google-scholar >}} Scholar"
+      href: https://scholar.google.com/citations?user=S3TOd7gAAAAJ&hl=en&oi=ao
 ---
 
-This is a Quarto website.
+### Hi there,
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+My name is Christian Reitan and I am a medical doctor/PhD currently working in Stockholm, Sweden. I do research within the field of cardiology. I have a special interest for coding, preferrably in R, and I enjoy using coding tools for a (ideally) fully reproducible research process. My research focuses on on individuals with coronary artery disease, mainly using registries.
 
-```{r}
-1 + 1
-```
+This is my personal webpage. I will use it to share basic information on me, and my CV (to do), and possibly tutorials or blog posts on random subjects related to my work.
