@@ -4,6 +4,7 @@ about:
   template: trestles
   image: assets/portrait.jpg
   image-shape: round
+  image-width: 15em
   links:
     #- icon: twitter-x
       # text: X
