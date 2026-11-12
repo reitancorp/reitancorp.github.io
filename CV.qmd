@@ -54,7 +54,7 @@ Methodologically I work with time-to-event analysis — competing risks, relativ
 
 I co-supervise a doctoral project at Karolinska Institutet on heart failure after myocardial infarction.
 
-I have received research funding from the Swedish Heart-Lung Foundation, ALF Region Stockholm, Region Skåne and the Department of Cardiology at Danderyd University Hospital, and have run an industry-funded research collaboration with Merck.
+I have received research funding from the Swedish Heart-Lung Foundation, ALF Region Stockholm, Region Skåne and the Department of Cardiology at Danderyd University Hospital, and from an industry collaboration with Merck.
 
 ## Publications
 ```{r}
@@ -88,9 +88,32 @@ remove_ <- c("Early Subjective Improvement of Exercise Capacity is an Indpendent
              "Left ventricular systolic dysfunction after acute myocardial infarction is associated with a high symptom burden and worse secondary prevention",
              "Comparison of sodium-glucose co-transporter-2 inhibitors and glucagon-like peptide-1 receptor agonists in myocardial infarction patients with type 2 diabetes"
 )
-pubs <- pubs %>% filter(!title %in% remove_) %>%
-  # remove on pubid
-  filter(!pubid == "QIV2ME_5wuYC")
+remove_id_ <- c("QIV2ME_5wuYC")
+
+# ESC congress abstracts appear in European Heart Journal supplements with an
+# article id like "ehae666". They are dropped by rule rather than by title, so
+# that next year's crop does not creep back in. Nine were present in November
+# 2026; the title list above catches three of them, this catches all.
+pubs <- pubs %>%
+  filter(!title %in% remove_,
+         !pubid %in% remove_id_,
+         !grepl("Supplement[_ ]?[0-9]", number))
+
+# Google Scholar mangles some records: author degrees glued to surnames, and
+# article ids split across `journal` and `number`. Corrected by hand, keyed on
+# pubid so a changed title does not lose the fix.
+fix_ <- tibble::tribble(
+  ~pubid,          ~field,     ~value,
+  "isC4tDSrTZIC",  "author",   "Malmqvist J, Wang C, Bergström G, Engström G, Hagström E, Juszczyk J, Kader R, Söderberg S, Östgren CJ, Reitan C, Jernberg T",
+  "r0BpntZqJG4C",  "journal",  "European Heart Journal – Cardiovascular Pharmacotherapy",
+  "r0BpntZqJG4C",  "number",   "pvag032",
+  "TFP_iSt0sucC",  "journal",  "European Heart Journal – Cardiovascular Pharmacotherapy",
+  "TFP_iSt0sucC",  "number",   "pvag059",
+  "j3f4tGmQtD8C",  "journal",  "European Heart Journal – Quality of Care and Clinical Outcomes",
+  "j3f4tGmQtD8C",  "number",   "qcag071"
+)
+for (i in seq_len(nrow(fix_)))
+  pubs[pubs$pubid == fix_$pubid[i], fix_$field[i]] <- fix_$value[i]
 
 # add information to thesis
 pubs <- pubs %>%
@@ -99,7 +122,8 @@ pubs <- pubs %>%
 
 # format for markdown
 pubs <- pubs %>%
-  mutate(out = paste0("[", author, " (", year, "). ", title, ". *", journal, "*. ", number,"](", url, ")\n\n")) %>%
+  mutate(title = sub("\\.$", "", title),
+         out = paste0("[", author, " (", year, "). ", title, ". *", journal, "*. ", number,"](", url, ")\n\n")) %>%
   select(title, out)
 
 cat(pubs$out)
