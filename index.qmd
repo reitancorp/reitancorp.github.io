@@ -25,6 +25,6 @@ about:
 
 ### Hi there,
 
-My name is Christian Reitan and I am a consultant cardiologist at Danderyd University Hospital in Stockholm, Sweden, and an affiliated researcher at Karolinska Institutet. I have a special interest for coding, preferrably in R, and I enjoy using coding tools for a (ideally) fully reproducible research process. My research focuses on individuals with coronary artery disease, mainly using registries — in particular what a myocardial infarction costs a person in life expectancy, and how that can be estimated well enough to be useful in the clinic.
+My name is Christian Reitan and I am a cardiologist at Danderyd University Hospital in Stockholm, Sweden, and an affiliated researcher at Karolinska Institutet. I have a special interest for coding, preferrably in R, and I enjoy using coding tools for a (ideally) fully reproducible research process. My research focuses on individuals with coronary artery disease, mainly using registries — in particular what a myocardial infarction costs a person in life expectancy, and how that can be estimated well enough to be useful in the clinic.
 
 This is my personal webpage. I use it to share basic information on me and my [CV](CV.qmd), and possibly tutorials or blog posts on random subjects related to my work.
