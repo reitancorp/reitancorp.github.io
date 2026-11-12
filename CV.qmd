@@ -7,7 +7,7 @@ A PDF version can be downloaded [here](https://github.com/reitancorp/cv/raw/mast
 Specialist in cardiology \| 2025 - Current\
 Danderyd University Hospital, Dept. of Cardiology \| Stockholm, Sweden
 
-Deputy head of section, cardiac emergency care \| 2026 - Current\
+Deputy lead physician, cardiac emergency care \| 2026 - Current\
 Danderyd University Hospital, Dept. of Cardiology \| Stockholm, Sweden
 
 Affiliated researcher \| 2020 - Current\
@@ -46,47 +46,15 @@ National Board of Health and Welfare, Sweden; Norwegian Directorate of Health (2
 Medical School, MD \| 2008 - 2014\
 Lund University \| Lund, Sweden
 
-## Research funding
+## Research
 
-Project grant, ALF Region Stockholm \| 2027 - 2029\
-*Net Effects of Myocardial Infarction on Life Expectancy: Development of an Individualized Prognostic Tool*\
-3 × SEK 300,000 (preliminary decision)
+My research is on what happens to people in the years after a myocardial infarction — how much life expectancy is lost, how that can be estimated well enough to be useful in the clinic, and what secondary prevention actually achieves. The work is mostly done in the national quality registries, above all SWEDEHEART, and in population cohorts such as SCAPIS.
 
-Project grant, Swedish Heart-Lung Foundation \| 2026 - 2027\
-*Net effects of myocardial infarction on long-term prognosis*\
-2 × SEK 300,000
+Methodologically I work with time-to-event analysis — competing risks, relative survival and loss of life expectancy — along with propensity-score methods, Bayesian survival models and machine-learning approaches to risk prediction. I write the analyses myself, in R and Quarto, under version control.
 
-Industry-funded research collaboration, Merck \| 2024 - 2026\
-Approximately SEK 650,000
+I co-supervise a doctoral project at Karolinska Institutet on heart failure after myocardial infarction.
 
-Internal research grant, Dept. of Cardiology, Danderyd University Hospital \| 2021\
-SEK 500,000
-
-Doctoral grant, Southern Healthcare Region \| 2018\
-SEK 180,000
-
-## Supervision and teaching
-
-Co-supervisor, doctoral project \| 2020 - Current\
-Karolinska Institutet / Danderyd University Hospital\
-Eleonora Hamilton, *Post myocardial infarction heart failure — baseline characteristics, prognosis and treatment effects*
-
-Teaching and Learning in Higher Education \| 2026\
-Karolinska Institutet
-
-Clinical supervisor training for residents \| 2026\
-Danderyd University Hospital
-
-Introductory Doctoral Supervision Course \| 2022\
-Karolinska Institutet
-
-## Methods
-
-Time-to-event analysis including competing risks, relative survival and loss of life expectancy; propensity-score methods; Bayesian survival modelling; machine-learning approaches to risk prediction; longitudinal models for repeated measurements. Applied within national quality registries (SWEDEHEART) and population cohorts (SCAPIS).
-
-Design of study databases and variable dictionaries, with reproducible analysis in R and Quarto under version control.
-
-Echocardiography with independent reporting under internal certification since 2024, and advanced training in right heart catheterisation (Skåne University Hospital, Lund, 2025).
+I have received research funding from the Swedish Heart-Lung Foundation, ALF Region Stockholm, Region Skåne and the Department of Cardiology at Danderyd University Hospital, and have run an industry-funded research collaboration with Merck.
 
 ## Publications
 ```{r}
