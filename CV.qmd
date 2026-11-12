@@ -1,36 +1,92 @@
 # CV
+
 A PDF version can be downloaded [here](https://github.com/reitancorp/cv/raw/master/cv/cv.pdf).
 
 ## Experience
 
-Resident physician, Cardiology \| 2020 - Current\
-Danderyd Hospital, Dept. of Cardiology \| Stockholm, Sweden
+Consultant cardiologist \| 2025 - Current\
+Danderyd University Hospital, Dept. of Cardiology \| Stockholm, Sweden
 
-Researcher \| 2020 - Current\
-Karolinska institutet, Institution for Clinical Sciences Danderyd Hospital \| Stockholm, Sweden
+Deputy head of section, cardiac emergency care \| 2026 - Current\
+Danderyd University Hospital, Dept. of Cardiology \| Stockholm, Sweden
 
-Surgeon, licensed physician \| 2018 - 2020\
-Karolinska University Hospital, Dept. of Cardiothoracic surgery \| Stockholm, Sweden
+Affiliated researcher \| 2020 - Current\
+Karolinska Institutet, Dept. of Clinical Sciences, Danderyd Hospital \| Stockholm, Sweden
 
-Surgeon, licensed physician \| 2017 - 2018\
-Scania University Hospital, Dept. of Cardiothoracic surgery \| Lund, Sweden
+Resident physician, Cardiology \| 2020 - 2025\
+Danderyd University Hospital, Dept. of Cardiology \| Stockholm, Sweden
 
-Medical internship, reseach profile (AT) \| 2015-2017\
-Scania University Hospital \| Malmö, Sweden
+Resident physician, Cardiothoracic surgery \| 2018 - 2020\
+Karolinska University Hospital, Heart and Vascular Theme \| Stockholm, Sweden
+
+Resident physician, Cardiothoracic surgery \| 2017 - 2018\
+Skåne University Hospital \| Lund, Sweden
+
+Medical internship, research profile (Forskar-AT) \| 2015 - 2017\
+Skåne University Hospital \| Malmö, Sweden
 
 Junior surgeon \| 2014 - 2015\
 Karolinska University Hospital, Dept. of Cardiothoracic surgery \| Stockholm, Sweden
 
-Junior Doctor \| 2014-2014\
-Scania University Hospital, Emergency department \| Lund, Sweden
+Junior doctor \| 2014\
+Skåne University Hospital, Emergency department \| Lund, Sweden
 
 ## Education
 
-PhD, Cardiology \| 2014-2018\
-Lund University \| Stockholm, Sweden
+Board certification in cardiology \| 2025\
+National Board of Health and Welfare \| Sweden
 
-Medical School, MD \| 2008-2014\
+PhD, Cardiology \| 2014 - 2018\
+Lund University, Faculty of Medicine \| Lund, Sweden\
+*Cardiac Resynchronization Therapy — Risk Stratification and Long-Term Outcome*
+
+Licence to practise medicine \| 2017\
+National Board of Health and Welfare, Sweden; Norwegian Directorate of Health (2019)
+
+Medical School, MD \| 2008 - 2014\
 Lund University \| Lund, Sweden
+
+## Research funding
+
+Project grant, ALF Region Stockholm \| 2027 - 2029\
+*Net Effects of Myocardial Infarction on Life Expectancy: Development of an Individualized Prognostic Tool*\
+3 × SEK 300,000 (preliminary decision)
+
+Project grant, Swedish Heart-Lung Foundation \| 2026 - 2027\
+*Net effects of myocardial infarction on long-term prognosis*\
+2 × SEK 300,000
+
+Industry-funded research collaboration, Merck \| 2024 - 2026\
+Approximately SEK 650,000
+
+Internal research grant, Dept. of Cardiology, Danderyd University Hospital \| 2021\
+SEK 500,000
+
+Doctoral grant, Southern Healthcare Region \| 2018\
+SEK 180,000
+
+## Supervision and teaching
+
+Co-supervisor, doctoral project \| 2020 - Current\
+Karolinska Institutet / Danderyd University Hospital\
+Eleonora Hamilton, *Post myocardial infarction heart failure — baseline characteristics, prognosis and treatment effects*
+
+Teaching and Learning in Higher Education \| 2026\
+Karolinska Institutet
+
+Clinical supervisor training for residents \| 2026\
+Danderyd University Hospital
+
+Introductory Doctoral Supervision Course \| 2022\
+Karolinska Institutet
+
+## Methods
+
+Time-to-event analysis including competing risks, relative survival and loss of life expectancy; propensity-score methods; Bayesian survival modelling; machine-learning approaches to risk prediction; longitudinal models for repeated measurements. Applied within national quality registries (SWEDEHEART) and population cohorts (SCAPIS).
+
+Design of study databases and variable dictionaries, with reproducible analysis in R and Quarto under version control.
+
+Echocardiography with independent reporting under internal certification since 2024, and advanced training in right heart catheterisation (Skåne University Hospital, Lund, 2025).
 
 ## Publications
 ```{r}
@@ -74,7 +130,7 @@ pubs <- pubs %>%
 
 
 # format for markdown
-pubs <- pubs %>% 
+pubs <- pubs %>%
   mutate(out = paste0("[", author, " (", year, "). ", title, ". *", journal, "*. ", number,"](", url, ")\n\n")) %>%
   select(title, out)
 
